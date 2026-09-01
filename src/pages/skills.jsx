@@ -19,7 +19,7 @@ const skillGroups = [
       <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
         <Reveal>
           <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.75rem", letterSpacing: "0.15em", color: C.mustard, textTransform: "uppercase", marginBottom: "0.75rem" }}>
-            // technical_skills
+            
           </div>
           <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2rem,3.5vw,3rem)", fontWeight: 900, color: C.white, marginBottom: "3.5rem" }}>
             My Tech <em style={{ color: C.mustard }}>Arsenal</em>
