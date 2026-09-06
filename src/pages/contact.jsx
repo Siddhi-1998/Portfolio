@@ -6,7 +6,7 @@ export default function Contact() {
     { icon: "✉", label: "Email", value: "ingavale.siddhi1998@gmail.com", href: "mailto:ingavale.siddhi1998@gmail.com" },
     { icon: "☏", label: "Phone", value: "+91 70283 24744", href: "tel:+917028324744" },
     { icon: "in", label: "LinkedIn", value: "linkedin.com/in/siddhi-ingavale", href: "https://linkedin.com/in/siddhi-ingavale" },
-    { icon: "📍", label: "Location", value: "Kolhapur, India", href: null },
+    { icon: "📍", label: "Location", value: "Pune, India", href: null },
   ];
 
   return (

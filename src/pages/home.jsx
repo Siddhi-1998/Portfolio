@@ -26,9 +26,13 @@ export default function Hero() {
     <section id="hero" style={{
       minHeight: "100vh",
       background: `linear-gradient(135deg, ${C.white} 0%, ${C.mustardBg} 60%, ${C.mustardPale} 100%)`,
-      display: "flow", alignItems: "center",
-      padding: "8rem 4rem 4rem",
-      position: "relative", overflow: "hidden",
+      display: "grid",
+      gridTemplateColumns: "1.1fr 0.9fr",
+      alignItems: "center",
+      gap: "4rem",
+      padding: "7rem 4rem 4rem",
+      position: "relative",
+      overflow: "hidden",
     }}>
       {/* Decorative circles */}
       {[
@@ -55,8 +59,16 @@ export default function Hero() {
         opacity: 0.06, userSelect: "none", lineHeight: 1,
         pointerEvents: "none",
       }}>S</div>
+    
+      <div
+            style={{
+              position: "relative",
+              zIndex: 1,
+              maxWidth: "750px",
+            }}
+      >
 
-      <div style={{ position: "relative", zIndex: 1, maxWidth: "750px" }}>
+      <div style={{ position: "relative", zIndex: 1, maxWidth: "750px",}}>
         {/* Badge */}
         <div style={{
           display: "inline-flex", alignItems: "center", gap: "0.6rem",
@@ -150,24 +162,63 @@ export default function Hero() {
             </a>
           ))}
         </div>
-
-        {/* Stats row */}
-        <div style={{
-          display: "flex", gap: "3rem", marginTop: "4rem",
-          paddingTop: "2rem", borderTop: `1px solid ${C.border}`,
-          animation: "fadeUp 0.7s 1s ease both",
-        }}>
-          {[["50+", "Production APIs"], ["40%", "Faster Response"], ["5+", "Years Experience"]].map(([n, l]) => (
-            <div key={n}>
-              <div style={{
-                fontFamily: "'Playfair Display', serif",
-                fontSize: "2.4rem", fontWeight: 900, color: C.mustard, lineHeight: 1,
-              }}>{n}</div>
-              <div style={{ fontSize: "0.8rem", color: C.midGray, marginTop: "0.3rem", letterSpacing: "0.05em" }}>{l}</div>
-            </div>
-          ))}
-        </div>
       </div>
-    </section>
+      </div>
+  <div
+      style={{
+        position: "relative",
+        zIndex: 1,
+        borderLeft: `1px solid ${C.border}`,
+        paddingLeft: "4rem",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        animation: "fadeUp 0.7s 0.9s ease both",
+      }}
+    >
+
+      {[
+        ["50+", "Production APIs"],
+        ["40%", "Faster Response"],
+        ["5+", "Years Experience"],
+      ].map(([n, l], i) => (
+        <div
+          key={n}
+          style={{
+            padding: "2rem 0",
+            borderBottom:
+              i !== 2 ? `1px solid ${C.border}` : "none",
+          }}
+        >
+
+          <div
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: "clamp(3rem, 5vw, 4.5rem)",
+              fontWeight: 900,
+              color: C.mustard,
+              lineHeight: 1,
+            }}
+          >
+            {n}
+          </div>
+
+          <div
+            style={{
+              fontSize: "1rem",
+              color: C.midGray,
+              marginTop: "0.6rem",
+              letterSpacing: "0.05em",
+            }}
+          >
+            {l}
+          </div>
+
+        </div>
+      ))}
+
+    </div>
+
+  </section>
   );
 }

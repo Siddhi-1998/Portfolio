@@ -19,7 +19,8 @@ export default function Nav({ active }) {
       display: "flex", justifyContent: "space-between", alignItems: "center",
       padding: "0 4rem",
       height: scrolled ? "60px" : "72px",
-      background: scrolled ? "rgba(255,255,255,0.96)" : "transparent",
+      background: scrolled ? "rgba(255,255,255,0.96)" : `linear-gradient(
+      135deg, ${C.white} 0%, ${C.mustardBg} 60%,  ${C.mustardPale} 100%)`,
       backdropFilter: scrolled ? "blur(16px)" : "none",
       borderBottom: scrolled ? `1px solid ${C.border}` : "none",
       transition: "all 0.35s ease",
